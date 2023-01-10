@@ -47,7 +47,7 @@ struct Home : View {
                     Circle()
                     .trim(from: 0, to: 1)
                         .stroke(Color.black.opacity(0.09), style: StrokeStyle(lineWidth: 15, lineCap: .round))
-                    .frame(width: 150, height: 150)
+                    .frame(width: 110, height: 110)
                     
                     Circle()
                         .trim(from: 0, to: self.to)

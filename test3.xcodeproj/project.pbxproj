@@ -14,6 +14,7 @@
 		B3ECB95C296BFAFB00EB7369 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3ECB95B296BFAFB00EB7369 /* Preview Assets.xcassets */; };
 		B3ECB967296BFE8400EB7369 /* reward1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ECB966296BFE8400EB7369 /* reward1.swift */; };
 		B3ECB96A296C149E00EB7369 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3ECB96C296C149E00EB7369 /* Localizable.strings */; };
+		B3ECB96E296D5AFC00EB7369 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ECB96D296D5AFC00EB7369 /* SplashScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B3ECB95B296BFAFB00EB7369 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B3ECB966296BFE8400EB7369 /* reward1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reward1.swift; sourceTree = "<group>"; };
 		B3ECB96B296C149E00EB7369 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B3ECB96D296D5AFC00EB7369 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		B3ECB953296BFAF900EB7369 /* test3 Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				B3ECB96D296D5AFC00EB7369 /* SplashScreenView.swift */,
 				B3ECB954296BFAF900EB7369 /* test3App.swift */,
 				B3ECB956296BFAF900EB7369 /* ContentView.swift */,
 				B3ECB966296BFE8400EB7369 /* reward1.swift */,
@@ -203,6 +206,7 @@
 				B3ECB967296BFE8400EB7369 /* reward1.swift in Sources */,
 				B3ECB957296BFAF900EB7369 /* ContentView.swift in Sources */,
 				B3ECB955296BFAF900EB7369 /* test3App.swift in Sources */,
+				B3ECB96E296D5AFC00EB7369 /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
