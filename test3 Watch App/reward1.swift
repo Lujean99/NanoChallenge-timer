@@ -1,0 +1,85 @@
+//
+//  reward1.swift
+//  test3 Watch App
+//
+//  Created by Lujeen Alradhi on 16/06/1444 AH.
+//
+
+import SwiftUI
+
+struct reward1: View {
+    @State var countdownTimer = 60
+    @State var timerRunning = false
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    var body: some View {
+        VStack{
+            Spacer()
+            Image("Image1")
+                .resizable()
+                .frame(width: 145,height: 145)
+                .clipShape(Circle())
+                .padding()
+            ZStack{
+                Text("drink water")}
+            
+            Text("\(countdownTimer)")
+                            .padding()
+                            .onReceive(timer) { _ in
+                                if countdownTimer > 0 && timerRunning {
+                                    countdownTimer -= 1
+                                } else {
+                                    timerRunning = true
+                                }
+            
+                            }
+        }
+    }
+}
+
+struct reward1_Previews: PreviewProvider {
+    static var previews: some View {
+        reward1()
+    }
+}
+
+
+//import SwiftUI
+//
+//struct ContentView: View {
+//    @State var countdownTimer = 5
+//    @State var timerRunning = false
+//    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+//
+//
+//    var body: some View {
+//        VStack {
+//            Text("\(countdownTimer)")
+//                .padding()
+//                .onReceive(timer) { _ in
+//                    if countdownTimer > 0 && timerRunning {
+//                        countdownTimer -= 1
+//                    } else {
+//                        timerRunning = false
+//                    }
+//
+//                }
+//                .font(.system(size: 40, weight: .bold))
+//
+//            HStack(spacing:30) {
+//                Button("Start") {
+//                    timerRunning = true
+//                }
+//
+//                Button("Reset") {
+//                    countdownTimer = 5
+//                }.foregroundColor(.red)
+//            }
+//        }
+//    }
+//}
+//
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

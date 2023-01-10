@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  test3
+
+  Created by Lujeen Alradhi on 16/06/1444 AH.
+  
+*/
+//"color" = "لون";
+"ply" = "ابدأ";
+"pause" = "توقف";
+"Restart" = "اعد الكره";
+"drink water" = "اشرب الماء";
+
