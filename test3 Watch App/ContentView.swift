@@ -36,8 +36,9 @@ struct Home : View {
         
         ZStack{
             
-            Color.black.opacity(0.06).edgesIgnoringSafeArea(.all)
-            
+            Color.black
+                .opacity(0.06)
+                .edgesIgnoringSafeArea(.all)
             
             VStack{
                 
@@ -45,47 +46,30 @@ struct Home : View {
                     
                     Circle()
                     .trim(from: 0, to: 1)
-                        .stroke(Color.black.opacity(0.09), style: StrokeStyle(lineWidth: 35, lineCap: .round))
-                 //   .frame(width: 280, height: 280)
+                        .stroke(Color.black.opacity(0.09), style: StrokeStyle(lineWidth: 15, lineCap: .round))
+                    .frame(width: 150, height: 150)
                     
                     Circle()
                         .trim(from: 0, to: self.to)
-                        .stroke(Color.red, style: StrokeStyle(lineWidth: 35, lineCap: .round))
+                        .stroke(Color.red, style: StrokeStyle(lineWidth: 15, lineCap: .round))
                //     .frame(width: 280, height: 280)
                     .rotationEffect(.init(degrees: -90))
                     
-                    
                     VStack{
-                        
                         Text("\(self.count)")
-                            .font(.system(size: 65))
+                            .font(.system(size: 40))
                             .fontWeight(.bold)
                         
                         Text("Of 15")
-                            .font(.title)
-                   //         .padding(.top)
+                         //   .font(.title)
+                            .font(.system(size: 15))
+                           // .frame(width: 60,height: 60)
+                           // .padding(.top)
                     }
-                    
-//                    Text(finishedText ?? "\(count)")
-//                        .font (.system (size: 100, weight: .semibold, design: .rounded)) . foregroundColor (.white) .lineLimit(1)
-//                        .minimumScaleFactor (0.1)
-                }
-//                .onReceive (time, perform: { _ in
-//                    if count <= 1 {
-//                        finishedText = "Wow!"
-//                    } else {
-//                        count -= 1}})
-                
-                
-                
-                
-                
-                
-                
-                
-                
+                }.padding(.bottom,35)
                 
                 HStack(spacing: 20){
+                    
                     
                     Button(action: {
                         
@@ -105,14 +89,13 @@ struct Home : View {
                             
                             Image(systemName: self.start ? "pause.fill" : "play.fill")
                                 .foregroundColor(.white)
-                            
-                            Text(self.start ? "Pause" : "Play")
-                                .foregroundColor(.white)
+                         //   Text(self.start ? "Pause" : "Play")
                         }
                         .padding(.vertical)
+                        .frame(width: 55,height: 55)
                        // .frame(width: (UIScreen.main.bounds.width / 2) - 55)
                         .background(Color.red)
-                        .clipShape(Capsule())
+                        .clipShape(Circle())
                         .shadow(radius: 6)
                     }
                     
@@ -129,25 +112,26 @@ struct Home : View {
                         
                         HStack(spacing: 15){
                             
-                            Image(systemName: "arrow.clockwise")
+                            Image(systemName: "arrow.clockwise.circle")
+                                .clipShape(Circle())
                                 .foregroundColor(.red)
-                            
-                            Text("Restart")
+                           // Text("Restart")
                                 .foregroundColor(.red)
-                            
+                                .frame(width: 55,height: 55)
+
                         }
                         //.padding(.vertical)
                        // .frame(width: (UIScreen.main.bounds.width / 2) - 55)
-                        .background(
-                        
-                            Capsule()
-                                .stroke(Color.red, lineWidth: 2)
-                        )
+//                        .background(
+//
+//                            Circle()
+//                                .stroke(Color.red, lineWidth: 2)
+//                        )
                         .shadow(radius: 6)
                     }
                 }
               //  .padding(.top, 55)
-            }
+            }.padding(.bottom,10)
             
         }
         .onAppear(perform: {
