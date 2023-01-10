@@ -10,6 +10,8 @@ import SwiftUI
 struct reward1: View {
     @State var countdownTimer = 60
     @State var timerRunning = false
+    @Binding var showSecondview : Bool
+    
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack{
@@ -29,8 +31,8 @@ struct reward1: View {
                                     countdownTimer -= 1
                                 } else {
                                     timerRunning = true
+                                    showSecondview = false
                                 }
-            
                             }
         }
     }

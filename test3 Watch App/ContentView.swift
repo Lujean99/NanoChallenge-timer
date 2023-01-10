@@ -23,10 +23,7 @@ struct ContentView_Previews: PreviewProvider {
 struct Home : View {
  //   @State var finishedText: String? = nil
     @State var start = false
-    
     @State var showSecondview = false
-
-    
     @State var to : CGFloat = 0
     @State var count = 0
     let time = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -179,9 +176,15 @@ struct Home : View {
                 
             }
             
-            if count == 15 {showSecondview.toggle()}
+            if count == 15 {
+                showSecondview.toggle()
+                self.count = 0
+            }
         }
-                .sheet(isPresented: $showSecondview){} content: {reward1()}
+                .sheet(isPresented: $showSecondview){} content: {
+                    reward1(, showSecondview: $showSecondview)
+                    
+                }
             
         }
     }
