@@ -33,7 +33,7 @@ struct Home : View {
             ZStack{
                     Color.black
                         .opacity(0.06)
-                        .ignoresSafeArea()
+//                        .ignoresSafeArea()
 //                        .edgesIgnoringSafeArea(.all)
                     
                     VStack{
@@ -61,7 +61,8 @@ struct Home : View {
                                 // .frame(width: 60,height: 60)
                                 // .padding(.top)
                             }
-                        }.padding(.bottom,35)
+                        }.padding()
+//                        .padding(.bottom,35)
                         
                         HStack(spacing: 20){
                             Button(action: {
@@ -82,13 +83,14 @@ struct Home : View {
                                     Image(systemName: self.start ? "pause.fill" : "play.fill")
                                         .foregroundColor(.white)
                                 }
-                                .padding(.vertical)
-                                .frame(width: 55,height: 55)
+//                                .padding(.vertical)
+                                .padding()
+//                                .frame(width: 55,height: 55)
                                 // .frame(width: (UIScreen.main.bounds.width / 2) - 55)
                                 .background(Color(uiColor: self.start ? UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 100):UIColor(red: 4/255, green: 222/255, blue: 113/255, alpha: 100)))
                                 
                                 .clipShape(Circle())
-                                .shadow(radius: 6)
+//                                .shadow(radius: 2)
                             }
                             
                             Button(action: {
@@ -101,22 +103,22 @@ struct Home : View {
                                 }
                                 
                             }) {
-                                
-                                HStack(spacing: 15){
+//                             HStack(spacing: 15){
                                     Image(systemName: "arrow.clockwise")
                                         .foregroundColor(.white)
-                                }
-                                .padding(.vertical)
-                                .frame(width: 55,height: 55)
+//                                }
+//                                .padding(.vertical)
+                             .padding()
+//                                .frame(width: 55,height: 55)
                                 .background(Color(UIColor(red: 155/255, green: 160/255, blue: 170/255, alpha: 100)))
                                 .clipShape(Circle())
-                                .shadow(radius: 6)
+//                                .shadow(radius: 2)
                             }
                         }
                         //  .padding(.top, 55)
-                    }.padding(.bottom,10)
+                    }.padding()
                     
-                }
+            }.padding()
                 .onAppear(perform: {
                     
                     UNUserNotificationCenter.current().requestAuthorization(options: [.badge,.sound,.alert]) { (_, _) in
@@ -154,12 +156,8 @@ struct Home : View {
                 .sheet(isPresented: $showSecondview){} content: {
                     reward1()
                     
-                }
-                .padding()
-                
-            }
-
-//        .padding()
+                }.padding()
+        }
     }
     
     func Notify(){

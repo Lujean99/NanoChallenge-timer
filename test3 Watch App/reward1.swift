@@ -34,7 +34,7 @@ struct reward1: View {
 //                                    showSecondview = false
                                 }
                             }
-        }
+        }.padding()
     }
 }
 
