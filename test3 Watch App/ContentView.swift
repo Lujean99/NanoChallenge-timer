@@ -9,7 +9,6 @@ import UserNotifications
 
 struct ContentView: View {
     var body: some View {
-        
         Home()
     }
 }
@@ -30,147 +29,137 @@ struct Home : View {
     
     var body: some View{
         NavigationView(){
-        
-        ZStack{
             
-            Color.black
-                .opacity(0.06)
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack{
-                
-                ZStack{
-                    
-                    Circle()
-                    .trim(from: 0, to: 1)
-                        .stroke(Color.black.opacity(0.09), style: StrokeStyle(lineWidth: 15, lineCap: .round))
-                    .frame(width: 150, height: 150)
-                    
-                    Circle()
-                        .trim(from: 0, to: self.to)
-                        .stroke(Color.red, style: StrokeStyle(lineWidth: 15, lineCap: .round))
-               //     .frame(width: 280, height: 280)
-                    .rotationEffect(.init(degrees: -90))
+            ZStack{
+                    Color.black
+                        .opacity(0.06)
+                        .ignoresSafeArea()
+//                        .edgesIgnoringSafeArea(.all)
                     
                     VStack{
-                        Text("\(self.count)")
-                            .font(.system(size: 40))
-                            .fontWeight(.bold)
-                        
-                        Text("Of 15")
-                         //   .font(.title)
-                            .font(.system(size: 15))
-                           // .frame(width: 60,height: 60)
-                           // .padding(.top)
-                    }
-                }.padding(.bottom,35)
-                
-                HStack(spacing: 20){
-                    
-                    
-                    Button(action: {
-                        
-                        if self.count == 15{
+                        ZStack{
                             
-                            self.count = 0
-                            withAnimation(.default){
+                            Circle()
+                                .trim(from: 0, to: 1)
+                                .stroke(Color.black.opacity(0.06), style: StrokeStyle(lineWidth: 15, lineCap: .round))
+                                .frame(width: 150, height: 150)
+                            
+                            Circle()
+                                .trim(from: 0, to: self.to)
+                                .stroke(Color(UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 100)), style: StrokeStyle(lineWidth: 15, lineCap: .round))
+                            //     .frame(width: 280, height: 280)
+                                .rotationEffect(.init(degrees: -90))
+                            
+                            VStack{
+                                Text("\(self.count)")
+                                    .font(.system(size: 40))
+                                    .fontWeight(.bold)
                                 
-                                self.to = 0
+                                Text("Of 15")
+                                //   .font(.title)
+                                    .font(.system(size: 15))
+                                // .frame(width: 60,height: 60)
+                                // .padding(.top)
+                            }
+                        }.padding(.bottom,35)
+                        
+                        HStack(spacing: 20){
+                            Button(action: {
+                                
+                                if self.count == 15{
+                                    
+                                    self.count = 0
+                                    withAnimation(.default){
+                                        
+                                        self.to = 0
+                                    }
+                                }
+                                self.start.toggle()
+                                
+                            }) {
+                                
+                                HStack(spacing: 15){
+                                    Image(systemName: self.start ? "pause.fill" : "play.fill")
+                                        .foregroundColor(.white)
+                                }
+                                .padding(.vertical)
+                                .frame(width: 55,height: 55)
+                                // .frame(width: (UIScreen.main.bounds.width / 2) - 55)
+                                .background(Color(uiColor: self.start ? UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 100):UIColor(red: 4/255, green: 222/255, blue: 113/255, alpha: 100)))
+                                
+                                .clipShape(Circle())
+                                .shadow(radius: 6)
+                            }
+                            
+                            Button(action: {
+                                
+                                self.count = 0
+                                
+                                withAnimation(.default){
+                                    
+                                    self.to = 0
+                                }
+                                
+                            }) {
+                                
+                                HStack(spacing: 15){
+                                    Image(systemName: "arrow.clockwise")
+                                        .foregroundColor(.white)
+                                }
+                                .padding(.vertical)
+                                .frame(width: 55,height: 55)
+                                .background(Color(UIColor(red: 155/255, green: 160/255, blue: 170/255, alpha: 100)))
+                                .clipShape(Circle())
+                                .shadow(radius: 6)
                             }
                         }
-                        self.start.toggle()
+                        //  .padding(.top, 55)
+                    }.padding(.bottom,10)
+                    
+                }
+                .onAppear(perform: {
+                    
+                    UNUserNotificationCenter.current().requestAuthorization(options: [.badge,.sound,.alert]) { (_, _) in
+                    }
+                }
+                )
+                .onReceive(self.time) { (_) in
+                    
+                    if self.start{
                         
-                    }) {
-                        
-                        HStack(spacing: 15){
+                        if self.count != 15{
                             
-                            Image(systemName: self.start ? "pause.fill" : "play.fill")
-                                .foregroundColor(.white)
-                         //   Text(self.start ? "Pause" : "Play")
+                            self.count += 1
+                            //  print("hello")
+                            
+                            withAnimation(.default){
+                                
+                                self.to = CGFloat(self.count) / 15
+                            }
                         }
-                        .padding(.vertical)
-                        .frame(width: 55,height: 55)
-                       // .frame(width: (UIScreen.main.bounds.width / 2) - 55)
-                        .background(Color.red)
-                        .clipShape(Circle())
-                        .shadow(radius: 6)
+                        
+                        else{
+                            
+                            self.start.toggle()
+                            self.Notify()
+                        }
+                        
                     }
                     
-                    Button(action: {
-                        
+                    if count == 15 {
+                        showSecondview.toggle()
                         self.count = 0
-                        
-                        withAnimation(.default){
-                            
-                            self.to = 0
-                        }
-                        
-                    }) {
-                        
-                        HStack(spacing: 15){
-                            
-                            Image(systemName: "arrow.clockwise.circle")
-                                .clipShape(Circle())
-                                .foregroundColor(.red)
-                           // Text("Restart")
-                                .foregroundColor(.red)
-                                .frame(width: 55,height: 55)
-
-                        }
-                        //.padding(.vertical)
-                       // .frame(width: (UIScreen.main.bounds.width / 2) - 55)
-//                        .background(
-//
-//                            Circle()
-//                                .stroke(Color.red, lineWidth: 2)
-//                        )
-                        .shadow(radius: 6)
                     }
                 }
-              //  .padding(.top, 55)
-            }.padding(.bottom,10)
-            
-        }
-        .onAppear(perform: {
-            
-            UNUserNotificationCenter.current().requestAuthorization(options: [.badge,.sound,.alert]) { (_, _) in
-            }
-        }
-        )
-        .onReceive(self.time) { (_) in
-            
-            if self.start{
-                
-                if self.count != 15{
-                    
-                    self.count += 1
-                    //  print("hello")
-                    
-                    withAnimation(.default){
-                        
-                        self.to = CGFloat(self.count) / 15
-                    }
-                }
-                
-                else{
-                    
-                    self.start.toggle()
-                    self.Notify()
-                }
-                
-            }
-            
-            if count == 15 {
-                showSecondview.toggle()
-                self.count = 0
-            }
-        }
                 .sheet(isPresented: $showSecondview){} content: {
-                    reward1(, showSecondview: $showSecondview)
+                    reward1()
                     
                 }
-            
-        }
+                .padding()
+                
+            }
+
+//        .padding()
     }
     
     func Notify(){

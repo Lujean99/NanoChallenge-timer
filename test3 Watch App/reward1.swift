@@ -10,7 +10,7 @@ import SwiftUI
 struct reward1: View {
     @State var countdownTimer = 60
     @State var timerRunning = false
-    @Binding var showSecondview : Bool
+//    @Binding var showSecondview : Bool
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
@@ -31,7 +31,7 @@ struct reward1: View {
                                     countdownTimer -= 1
                                 } else {
                                     timerRunning = true
-                                    showSecondview = false
+//                                    showSecondview = false
                                 }
                             }
         }
