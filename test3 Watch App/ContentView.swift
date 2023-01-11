@@ -55,7 +55,7 @@ struct Home : View {
                                     .font(.system(size: 40))
                                     .fontWeight(.bold)
                                 
-                                Text("Of 15")
+                                Text("Of 5")
                                 //   .font(.title)
                                     .font(.system(size: 15))
                                 // .frame(width: 60,height: 60)
@@ -67,7 +67,7 @@ struct Home : View {
                         HStack(spacing: 20){
                             Button(action: {
                                 
-                                if self.count == 15{
+                                if self.count == 5{
                                     
                                     self.count = 0
                                     withAnimation(.default){
@@ -129,14 +129,14 @@ struct Home : View {
                     
                     if self.start{
                         
-                        if self.count != 15{
+                        if self.count != 5{
                             
                             self.count += 1
                             //  print("hello")
                             
                             withAnimation(.default){
                                 
-                                self.to = CGFloat(self.count) / 15
+                                self.to = CGFloat(self.count) / 5
                             }
                         }
                         
@@ -148,9 +148,11 @@ struct Home : View {
                         
                     }
                     
-                    if count == 15 {
+                    if count == 5 {
                         showSecondview.toggle()
                         self.count = 0
+                        time.upstream.connect().cancel()
+
                     }
                 }
                 .sheet(isPresented: $showSecondview){} content: {
