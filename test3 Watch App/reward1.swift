@@ -15,10 +15,12 @@ struct reward1: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack{
-            Spacer()
+//            Spacer()
+//            Spacer()
+//            Spacer()
             Image("Image1")
                 .resizable()
-                .frame(width: 145,height: 145)
+                .frame(width: 135,height: 135)
                 .clipShape(Circle())
                 .padding()
             ZStack{
@@ -34,7 +36,7 @@ struct reward1: View {
 //                                    showSecondview = false
                                 }
                             }
-        }.padding()
+        }.padding(.top,30)
     }
 }
 

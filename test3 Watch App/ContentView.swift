@@ -42,7 +42,7 @@ struct Home : View {
                             Circle()
                                 .trim(from: 0, to: 1)
                                 .stroke(Color.black.opacity(0.06), style: StrokeStyle(lineWidth: 15, lineCap: .round))
-                                .frame(width: 150, height: 150)
+                                .frame(width:  135, height:  135)
                             
                             Circle()
                                 .trim(from: 0, to: self.to)
@@ -61,7 +61,7 @@ struct Home : View {
                                 // .frame(width: 60,height: 60)
                                 // .padding(.top)
                             }
-                        }.padding()
+                        }.padding(.top,40)
 //                        .padding(.bottom,35)
                         
                         HStack(spacing: 20){
