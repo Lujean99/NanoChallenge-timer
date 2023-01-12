@@ -2,11 +2,11 @@
 
 ## Table of Contents
   * [Big Idea](#Big Idea)
-  * [Challenge Statement](#Challenge Statement )
+  * [Challenge Statement](#Challenge Statement)
   * [Solution Concept](#Solution Concept)
   * [Technology & Tools](#Technology & Tools)
   * [Demo](#Demo)
-  * [Challenge Summary](#Challenge Summary )
+  * [Challenge Summary](#Challenge Summary)
   * [Installation](#Installation)
   * [Questions](#Questions)
 
