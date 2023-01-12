@@ -21,8 +21,8 @@ help people to track their daily tasks
 An app that provides a 60|15 timer to help people manage their time in an efficient way
 
 ## Technology&Tools
-- SwiftUi
-- Scketch
+[![Swift][Swift-img]][Swift-url]   [![Sketch][Sketch-img]][Sketch-url]
+
 
 
 ## Demo
@@ -44,9 +44,12 @@ An app that provides a 60|15 timer to help people manage their time in an effici
   If you have any questions, or additional feedback, please feel free to email me and I will respond as soon as possible.
   
   _Contact Info:_
+<a href="https://github.com/Lujean99">Lujean Alradhi</a> - <a href="https://github.com/nhajarn">Hajar Alruqi</a> 
 
-  GitHub: [Lujean Alradhi]([https://github.com/Lujean99])
-  GitHub: [Hajar Alruqi]([https://github.com/nhajarn])
+  <!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[Swift-img]: https://img.shields.io/badge/SwiftUi-SwiftUi-orange
+[Swift-url]: https://developer.apple.com/swift/
 
-  
- 
+[Sketch-img]: https://img.shields.io/badge/-Figma-blue
+[Sketch-url]: https://www.sketch.com/
