@@ -2,25 +2,25 @@
 
 ## Table of Contents
   * [Big Idea](#Big Idea)
-  * [Challenge Statement](#Challenge Statement)
-  * [Solution Concept](#Solution Concept)
-  * [Technology & Tools](#Technology & Tools)
+  * [Challenge Statement](#ChallengeStatement)
+  * [Solution Concept](#SolutionConcept)
+  * [Technology & Tools](#Technology&Tools)
   * [Demo](#Demo)
-  * [Challenge Summary](#Challenge Summary)
+  * [Challenge Summary](#ChallengeSummary)
   * [Installation](#Installation)
   * [Questions](#Questions)
 
 
-## Big Idea
+## BigIdea
 Inclusion
 
-## Challenge Statement 
+## ChallengeStatement 
 help people to track their daily tasks
 
-## Solution Concept
+## SolutionConcept
 An app that provides a 60|15 timer to help people manage their time in an efficient way
 
-## Technology & Tools
+## Technology&Tools
 - SwiftUi
 - Voice Over
 - Localization
@@ -29,7 +29,7 @@ An app that provides a 60|15 timer to help people manage their time in an effici
 ## Demo
 
 
-## Challenge Summary 
+## ChallengeSummary 
 
 
     
