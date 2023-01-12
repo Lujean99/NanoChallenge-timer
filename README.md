@@ -49,8 +49,8 @@ An app that provides a 60|15 timer to help people manage their time in an effici
 
   <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[Swift-img]: https://img.shields.io/badge/SwiftUi-SwiftUi-orange
+[Swift-img]: https://img.shields.io/badge/-SwiftUi-orange
 [Swift-url]: https://developer.apple.com/swift/
 
-[Sketch-img]: https://img.shields.io/badge/Sketch-Sketch-yellow
+[Sketch-img]: https://img.shields.io/badge/-Sketch-orange
 [Sketch-url]: https://www.sketch.com/
