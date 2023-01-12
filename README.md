@@ -44,6 +44,7 @@ An app that provides a 60|15 timer to help people manage their time in an effici
   If you have any questions, or additional feedback, please feel free to email me and I will respond as soon as possible.
   
   _Contact Info:_
+  Space Team (8)
 <a href="https://github.com/Lujean99">Lujean Alradhi</a> - <a href="https://github.com/nhajarn">Hajar Alruqi</a> 
 
   <!-- MARKDOWN LINKS & IMAGES -->
@@ -51,5 +52,5 @@ An app that provides a 60|15 timer to help people manage their time in an effici
 [Swift-img]: https://img.shields.io/badge/SwiftUi-SwiftUi-orange
 [Swift-url]: https://developer.apple.com/swift/
 
-[Sketch-img]: https://img.shields.io/badge/-Figma-blue
+[Sketch-img]: https://img.shields.io/badge/Sketch-Sketch-yellow
 [Sketch-url]: https://www.sketch.com/
