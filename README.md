@@ -21,8 +21,7 @@ help people to track their daily tasks
 An app that provides a 60|15 timer to help people manage their time in an efficient way
 
 ## Technology&Tools
-[![SwiftUi][https://img.shields.io/badge/SwiftUi-SwiftUi-orange]][Swift-url]
-[![Sketch][https://img.shields.io/badge/Sketch-Sketch-yellow]][https://www.sketch.com/]
+[![Swift][Swift-img]][Swift-url]   [![Figma][Figma-img]][Figma-url]
 
 
 ## Demo
