@@ -1,7 +1,7 @@
 # TIME IT
 
 ## Table of Contents
-  * [Big Idea](#Big Idea)
+  * [Big Idea](#BigIdea)
   * [Challenge Statement](#ChallengeStatement)
   * [Solution Concept](#SolutionConcept)
   * [Technology & Tools](#Technology&Tools)
