@@ -1,15 +1,13 @@
 # TIME IT
-
-## Table of Contents
-  * [Big Idea](#Big Idea)
-  * [Challenge Statement](#Challenge Statement)
-  * [Solution Concept](#Solution Concept)
-  * [Technology & Tools](#Technology & Tools)
-  * [Demo](#Demo)
-  * [Challenge Summary](#Challenge Summary)
-  * [Questions](#Questions)
-
-
+<!-- PROJECT LOGO -->
+<div>
+ <h3><img align="left" width="100" height="100" src="logo.png"> <br/> TIME IT <br/>
+ <br/> Utilities <br/></h3>
+ </div>   
+ 
+ 
+##
+ 
 ## Big Idea
 Inclusion
 
@@ -51,3 +49,4 @@ An app that provides a 60|15 timer to help people manage their time in an effici
 
 [Sketch-img]: https://img.shields.io/badge/-Sketch-orange
 [Sketch-url]: https://www.sketch.com/
+  
