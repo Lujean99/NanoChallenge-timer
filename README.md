@@ -1,26 +1,25 @@
 # TIME IT
 
 ## Table of Contents
-  * [Big Idea](#BigIdea)
-  * [Challenge Statement](#ChallengeStatement)
-  * [Solution Concept](#SolutionConcept)
-  * [Technology & Tools](#Technology&Tools)
+  * [Big Idea](#Big Idea)
+  * [Challenge Statement](#Challenge Statement)
+  * [Solution Concept](#Solution Concept)
+  * [Technology & Tools](#Technology & Tools)
   * [Demo](#Demo)
-  * [Challenge Summary](#ChallengeSummary)
-  * [Installation](#Installation)
+  * [Challenge Summary](#Challenge Summary)
   * [Questions](#Questions)
 
 
-## BigIdea
+## Big Idea
 Inclusion
 
-## ChallengeStatement 
+## Challenge Statement 
 help people to track their daily tasks
 
-## SolutionConcept
+## Solution Concept
 An app that provides a 60|15 timer to help people manage their time in an efficient way
 
-## Technology&Tools
+## Technology & Tools
 [![Swift][Swift-img]][Swift-url]   [![Sketch][Sketch-img]][Sketch-url]
 
 
@@ -28,14 +27,12 @@ An app that provides a 60|15 timer to help people manage their time in an effici
 ## Demo
 
 
-## ChallengeSummary 
+## Challenge Summary 
+<p align="center">
+<img align="center" width=70% height=70% src="Space_ADATWQ_2022_2023.001.jpeg">
+</p>
 
 
-    
-## Installation
-    
-  Soon...
-  
       
 ## Questions
       
